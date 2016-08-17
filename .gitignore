@@ -39,4 +39,5 @@ core.*
 dependency-reduced-pom.xml
 service-dist/
 .*.html
-
+*.iml
+.idea/

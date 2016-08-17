@@ -27,7 +27,6 @@ import org.flowcomputing.commons.resgc.ResCollector;
 import org.flowcomputing.commons.resgc.ResReclaim;
 
 import sun.misc.Unsafe;
-import sun.misc.Cleaner;
 
 /**
  * manage a system memory pool as a internal volatile allocator
@@ -77,8 +76,8 @@ public class SysMemAllocator extends CommonAllocator<SysMemAllocator> {
             Field cleanerField;
             cleanerField = mres.getClass().getDeclaredField("cleaner");
             cleanerField.setAccessible(true);
-            Cleaner cleaner = (Cleaner) cleanerField.get(mres);
-            cleaner.clean();
+            Runnable cleaner = (Runnable) cleanerField.get(mres);
+            cleaner.run();
           } catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException e) {
             e.printStackTrace();
           }

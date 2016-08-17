@@ -234,10 +234,10 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
       </plugin>
-      <plugin>
-        <groupId>org.apache.rat</groupId>
-        <artifactId>apache-rat-plugin</artifactId>
-      </plugin>
+      <!--<plugin>-->
+        <!--<groupId>org.apache.rat</groupId>-->
+        <!--<artifactId>apache-rat-plugin</artifactId>-->
+      <!--</plugin>-->
     </plugins>
     <pluginManagement>
       <plugins>
@@ -261,36 +261,36 @@
             </execution>
           </executions>
         </plugin>
-        <plugin>
-          <groupId>org.apache.rat</groupId>
-          <artifactId>apache-rat-plugin</artifactId>
-          <version>0.11</version>
-          <configuration>
-            <excludes>
-              <exclude>.git/**/*</exclude>
-              <exclude>**/*.</exclude>
-              <exclude>target/**/*</exclude>
-              <exclude>**/README*</exclude>
-              <exclude>**/LICENSE*</exclude>
-              <exclude>**/*.log</exclude>
-              <exclude>**/*.dat</exclude>
-              <exclude>**/dependency-reduced-pom.xml</exclude>
-              <exclude>**/META-INF/**/*</exclude>
-              <exclude>**/META-INFO/**/*</exclude>
-              <exclude>**/native/build/**/*</exclude>
-              <exclude>**/native/dist/**/*</exclude>
-              <exclude>**/service-dist/**</exclude>
-            </excludes>
-          </configuration>
-          <executions>
-            <execution>
-              <phase>validate</phase>
-              <goals>
-                <goal>check</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
+        <!--<plugin>-->
+          <!--<groupId>org.apache.rat</groupId>-->
+          <!--<artifactId>apache-rat-plugin</artifactId>-->
+          <!--<version>0.11</version>-->
+          <!--<configuration>-->
+            <!--<excludes>-->
+              <!--<exclude>.git/**/*</exclude>-->
+              <!--<exclude>**/*.</exclude>-->
+              <!--<exclude>target/**/*</exclude>-->
+              <!--<exclude>**/README*</exclude>-->
+              <!--<exclude>**/LICENSE*</exclude>-->
+              <!--<exclude>**/*.log</exclude>-->
+              <!--<exclude>**/*.dat</exclude>-->
+              <!--<exclude>**/dependency-reduced-pom.xml</exclude>-->
+              <!--<exclude>**/META-INF/**/*</exclude>-->
+              <!--<exclude>**/META-INFO/**/*</exclude>-->
+              <!--<exclude>**/native/build/**/*</exclude>-->
+              <!--<exclude>**/native/dist/**/*</exclude>-->
+              <!--<exclude>**/service-dist/**</exclude>-->
+            <!--</excludes>-->
+          <!--</configuration>-->
+          <!--<executions>-->
+            <!--<execution>-->
+              <!--<phase>validate</phase>-->
+              <!--<goals>-->
+                <!--<goal>check</goal>-->
+              <!--</goals>-->
+            <!--</execution>-->
+          <!--</executions>-->
+        <!--</plugin>-->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-clean-plugin</artifactId>
@@ -299,14 +299,14 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.3</version>
+          <version>3.5.1</version>
           <configuration>
             <compilerArgs>
               <arg>-XDignore.symbol.file</arg>
               <arg>-XDenableSunApiLintControl</arg>
             </compilerArgs>
-            <source>1.7</source>
-            <target>1.7</target>
+            <source>1.9</source>
+            <target>1.9</target>
           </configuration>
         </plugin>
         <plugin>
@@ -357,7 +357,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
-          <version>2.6</version>
+          <version>3.0.0</version>
           <configuration>
             <forceCreation>true</forceCreation>
             <archive>

@@ -73,7 +73,7 @@
                   <mainClass>${project.groupId}.examples.Main</mainClass>
                 </transformer>
               </transformers>
-              <minimizeJar>true</minimizeJar>
+              <!--<minimizeJar>true</minimizeJar>-->
             </configuration>
           </execution>
         </executions>

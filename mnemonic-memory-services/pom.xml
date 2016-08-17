@@ -39,8 +39,8 @@
   </properties>
 
   <modules>
-    <module>mnemonic-nvml-vmem-service</module>
-    <module>mnemonic-pmalloc-service</module>
+    <!--<module>mnemonic-nvml-vmem-service</module>-->
+    <!--<module>mnemonic-pmalloc-service</module>-->
   </modules>
 
   <dependencies>
@@ -71,7 +71,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
-          <version>2.6</version>
+          <version>3.0.0</version>
           <configuration>
             <forceCreation>true</forceCreation>
             <archive>

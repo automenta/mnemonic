@@ -26,7 +26,6 @@ import java.util.Date;
 import java.util.Random;
 import java.util.UUID;
 
-import sun.misc.Unsafe;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ServiceLoader;
@@ -34,6 +33,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.mnemonic.service.allocatorservice.VolatileMemoryAllocatorService;
 import org.apache.mnemonic.service.computingservice.GeneralComputingService;
 import org.apache.mnemonic.service.allocatorservice.NonVolatileMemoryAllocatorService;
+import sun.misc.Unsafe;
 
 /**
  * <p>
